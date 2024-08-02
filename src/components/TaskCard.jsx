@@ -6,10 +6,15 @@ const TaskCard = ({ task }) => {
 
   return (
     <>
-      <div className="bg-gray-800 text-white rounded-md">
-        <h1 className="text-lg font-bold">{task.nombre}</h1>
+      <div className="bg-gray-800 text-white rounded-md p-4">
+        <h1 className="text-lg font-bold capitalize">{task.nombre}</h1>
         <p className="text-sm text-gray-500">{task.fecha_entrega}</p>
-        <button onClick={() => deleteTask(task.id)}>X</button>
+        <button
+          className="bg-red-600 px-2 py-1 rounded-md mt-4 hover:bg-red-500"
+          onClick={() => deleteTask(task.id)}
+        >
+          Eliminar
+        </button>
       </div>
     </>
   );

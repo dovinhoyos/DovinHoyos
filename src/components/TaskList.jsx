@@ -6,7 +6,11 @@ export const TaskList = () => {
   const { tasks } = useContext(TaskContext);
 
   if (tasks.length === 0) {
-    return <h1>No hay tareas...</h1>;
+    return (
+      <h1 className="text-4xl font-bold text-center text-white">
+        No hay tareas...
+      </h1>
+    );
   }
 
   return (
